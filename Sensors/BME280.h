@@ -149,6 +149,7 @@ class BME280
     void start();
     void printAll();
 	float readHumidity(String units);
+	float readAltitude(String units);
 	float readTemp(String units);
 	float readPressure(String units);
 	void help();
