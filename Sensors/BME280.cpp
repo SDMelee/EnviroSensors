@@ -118,6 +118,29 @@ float BME280::readTemp(String units){
 		Serial.println("BME280 units not recognized. Use help() for available units.");
 }
 
+float BME280::readPressure(String units){
+	if(units=="Pa")
+		return readFloatPressure();
+	else
+		Serial.println("BME280 units not recognized. Use help() for available units.");
+}
+
+float BME280::readAltitude(String units){
+	if(units=="meters")
+		return readFloatAltitudeMeters();
+	else if(units=="ft")
+		return readFloatAltitudeFeet();
+	else
+		Serial.println("BME280 units not recognized. Use help() for available units.");
+}
+
+float BME280::readHumidity(String units){
+	if(units=="%")
+		return readFloatHumidity();
+	else
+		Serial.println("BME280 units not recognized. Use help() for available units.");
+}
+
 void BME280::printAll(){
 	//Each loop, take a reading.
 	//Start with temperature, as that data is needed for accurate compensation.
