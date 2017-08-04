@@ -56,6 +56,10 @@ MQ7::MQ7(int CoPWMPin, int analogPin){
   	currCoPwrTimer = 500;
 }
 
+MQ7::MQ7(int analogPin){
+  _analogPin=analogPin;
+}
+
 void MQ7::CoPwrCycler(){
   
   currTime = millis();
