@@ -28,6 +28,7 @@ class MQ7{
   public:
     MQ7(int CoPWMPin, int CoIndicatorPin, int analogPin);
     MQ7(int CoPWMPin, int analogPin);
+    MQ7(int analogPin);
     void CoPwrCycler();
     bool dataAvailable();
     float readValue(String units);
