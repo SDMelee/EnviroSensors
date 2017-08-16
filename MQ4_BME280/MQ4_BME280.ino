@@ -4,13 +4,13 @@ int methanePin=0;
 int sdaPin=4;
 int sclPin=5;
 
-BME280 atmosphericSensor(sdaPin, sclPin, "i2c");
+_BME280 atmosphericSensor(sdaPin, sclPin, "i2c");
 MQ4 methaneSensor(methanePin);
 
 void setup() {
   // put your setup code here, to run once:
   Serial.begin(57600);
-  atmosphericSensor.start();
+  atmosphericSensor.begin();
   methaneSensor.calibrate();
 }
 
