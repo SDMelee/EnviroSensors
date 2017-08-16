@@ -11,14 +11,14 @@ int sclPin=5;
 MQ4 MethaneSensor(methanePin);
 MQ7 COSensor(COPWMPin, COLEDPin, COReadPin);
 PhotoR LightSensor(photoRPin);
-BME280 AtmosphericSensor(sdaPin, sclPin, "i2c");
+_BME280 AtmosphericSensor(sdaPin, sclPin, "i2c");
 
 
 void setup() {
   // put your setup code here, to run once:
   Serial.begin(57600);
   // Start communication on BME280
-  AtmosphericSensor.start();
+  AtmosphericSensor.begin();
 }
 
 void loop() {
