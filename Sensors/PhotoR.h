@@ -1,13 +1,21 @@
+/****************************************************************************************************
+PhotoR.h
+Photoresistor Arduino library
+Amelia Peterson w/ CSDT @ RPI
+Contact: petera7@rpi.edu
+Last Updated: 08/15/2017
+
+Visit our site at: www.csdt.rpi.edu
+
+Description:
+  This class measures the resistance of an SEN-09088 photoresistor and converts that value to
+illuminance (lux).
+****************************************************************************************************/
+
 #ifndef PhotoR_h
 #define PhotoR_h
 
-#if ARDUINO >= 100
- #include "Arduino.h"
-#else
- #include "WProgram.h"
- #include "stdlib.h"
- #include "wiring.h"
-#endif
+#include "Arduino.h"
 
 class PhotoR{
 public:
@@ -23,7 +31,7 @@ public:
 		else{
 			Serial.println("PhotoR: units not recognized. Use PhotoR.help() for available units.");
 		}
-		return convertedValue; // return convertedValue when that code is implemented
+		return convertedValue;
 	}
 	void help(){
 		Serial.println("The Photoresistor detects light intensity.");
