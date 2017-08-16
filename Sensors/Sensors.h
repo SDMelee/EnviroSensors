@@ -3,3 +3,4 @@
 #include "BME280.h"
 #include "PhotoR.h"
 #include "TMP36.h"
+#include "BlueSMiRF.h"
